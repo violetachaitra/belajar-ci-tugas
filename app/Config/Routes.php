@@ -7,10 +7,14 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 $routes->get('/', 'Home::index', ['filter' => 'auth']);
+$routes->get('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 
 $routes->get('login', 'AuthController::login');
 $routes->post('login', 'AuthController::login');
 $routes->get('logout', 'AuthController::logout');
+
+$routes->get('register', 'AuthController::register');
+$routes->post('register', 'AuthController::registerProcess');
 
 $routes->group('produk', ['filter' => 'auth'], function ($routes) { 
     $routes->get('', 'ProdukController::index');
@@ -38,3 +42,4 @@ $routes->get('faq', 'Home::faq', ['filter' => 'auth']);
 $routes->get('profile', 'Home::profile', ['filter' => 'auth']);
 $routes->get('contact', 'Home::contact', ['filter' => 'auth']);
 
+$routes->resource('api', ['controller' => 'apiController']);

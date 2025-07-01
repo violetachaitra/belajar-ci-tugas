@@ -21,9 +21,8 @@ $password = [
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="<?php echo base_url() ?>NiceAdmin/assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">Toko</span>
+                <a href="https://www.vivo.com/id/products" class="logo d-flex align-items-center w-auto">
+                  <img src="<?php echo base_url() ?>NiceAdmin/assets/img/logo-toko.png" alt="" style="height: 100px !important; max-height: none !important;">
                 </a>
               </div><!-- End Logo -->
 
@@ -69,6 +68,12 @@ $password = [
                         <?= form_submit('submit', 'Login', ['class' => 'btn btn-primary w-100']) ?>
                     </div>
 
+                    <div class="col-12 text-center">
+                        <p class="small mb-0">
+                            Don't have an account? <a href="<?= base_url('register') ?>">Register here</a>
+                        </p>
+                    </div>
+
                     <?= form_close() ?>
 
                 </div>
@@ -79,7 +84,7 @@ $password = [
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                Designed by <a href="https://bootstrapmade.com/">VioletaChaitra</a>
               </div>
 
             </div>
