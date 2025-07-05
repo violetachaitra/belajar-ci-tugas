@@ -48,6 +48,7 @@ $routes->get('dashboard', 'Dashboard::index', ['filter' => 'auth']);
 $routes->get('dashboard/cetak', 'Dashboard::exportpdf', ['filter' => 'auth']);
 $routes->get('dashboard/export-pdf', 'Dashboard::exportpdf', ['filter' => 'auth']);
 
-
+$routes->post('penjualan/updateStatus/(:any)','TransaksiController::updateStatus/$1', ['filter' => 'auth']); 
+$routes->get('penjualan', 'Home::penjualan', ['filter' => 'auth']); 
 
 $routes->resource('api', ['controller' => 'apiController']);
